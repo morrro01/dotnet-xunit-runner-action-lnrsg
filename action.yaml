@@ -1,0 +1,47 @@
+name: '.NET XUnit Runner Action'
+description: 'GitHub action that runs XUnit against a .NET project, and reports the results.'
+author: 'morrro01 <robert.morrow@lexisnexisrisk.com>'
+
+branding:
+  icon: 'heart'
+  color: 'red'
+
+inputs:
+  github_token:
+    description: 'GitHub API token with repository access.'
+    default: ${{ github.token }}
+    required: false
+  path:
+    description: 'Workspace path containing the .NET project to run XUnit against.'
+    required: true
+  test_args:
+    description: 'Additional arguments passed to XUnit.'
+    required: false
+  comment_on_pr:
+    description: 'Whether to comment Pull Requests with the test summary; one of: true, false.'
+    default: true
+    required: false
+  comment_title:
+    description: 'Title of Pull Request comments, if enabled.'
+    default: 'XUnit Test Results'
+    required: false
+  upload_artifact:
+    description: 'Whether to upload the generated test result as an artifact; one of: true, false.'
+    default: true
+    required: false
+  artifact_name:
+    description: 'Name given to the uploaded test report artifact, if enabled.'
+    default: 'XUnit Results'
+    required: false
+  artifact_retention_days:
+    description: 'Number of days to retain the uploaded XUnit result artifact, if enabled.'
+    default: 30
+    required: false
+  fail_on_nonpassing:
+    description: 'Whether to fail the action in the presence of non-passing tests; one of: true, false.'
+    default: true
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'docker://ghcr.io/morrro01/dotnet-xunit-runner-action-lnrsg:v1.0.0'

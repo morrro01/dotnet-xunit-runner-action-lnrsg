@@ -1,0 +1,119 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  prepare:
+    name: Prepare
+    runs-on: ubuntu-latest
+    outputs:
+      changelog: ${{ steps.extractChangelog.outputs.changelog }}
+      imageVersion: ${{ steps.extractImageVersion.outputs.version }}
+
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v2
+
+      - name: 🔨 Extract Image Version
+        id: extractImageVersion
+        run: |
+          image=$(grep -A 10 "^runs:" action.yaml | grep -E "\s+image: 'docker://ghcr.io/morrro01/dotnet-xunit-runner-action-lnrsg:" | sed -E -e "s/^\s+image:\s*'docker:\/\///" -e "s/'\s*$//")
+          version=$(cut -d : -f 2 <<< "$image")
+          echo "::set-output name=version::$version"
+
+      - name: ⛏️ Extract Changelog
+        id: extractChangelog
+        uses: mikepenz/release-changelog-builder-action@v2.4.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  build:
+    name: Build
+    needs: [ prepare ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v2
+
+      - name: 🧱 Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles( 'package.json' )}}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: ⚙️ Install Dependencies
+        run: yarn
+
+      - name: 🔨 Build
+        run: yarn build
+
+      - name: 📦 Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: action-artifact
+          retention-days: 1
+          path: lib/
+
+  deploy:
+    name: Deploy
+    needs: [ prepare, build ]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v2
+
+      - name: 🔨 Setup QEMU
+        uses: docker/setup-qemu-action@v1
+
+      - name: 🔨 Setup Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: 🔒 Login to GitHub Docker Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🐋 Generate Metadata
+        id: generateMetadata
+        uses: docker/metadata-action@v3
+        with:
+          images: ghcr.io/morrro01/dotnet-xunit-runner-action-lnrsg
+          tags: |
+            type=sha
+            type=ref,event=tag
+            type=match,pattern=(v\d+),group=1
+            type=match,pattern=(v\d+.\d+),group=1
+            type=match,pattern=(v\d+.\d+.\d+),group=1
+            type=semver,pattern=v{{major}},value=${{ needs.prepare.outputs.imageVersion }}.0
+            type=semver,pattern=v{{major}}.{{minor}},value=${{ needs.prepare.outputs.imageVersion }}.0
+            type=semver,pattern=v{{major}}.{{minor}}.{{patch}},value=${{ needs.prepare.outputs.imageVersion }}
+
+      - name: 📦 Fetch Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: action-artifact
+          path: action
+      
+      - name: 🐋 Push to GitHub Docker Registry
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          tags: ${{ steps.generateMetadata.outputs.tags }}
+          labels: ${{ steps.generateMetadata.outputs.labels }}
+          push: true
+
+      - name: 🚀 Release
+        uses: ncipollo/release-action@v1
+        with:
+          body: "${{ needs.prepare.outputs.changelog }}"
+          commit: ${{ env.GITHUB_SHA }}
+          tag: "${{ needs.prepare.outputs.imageVersion }}"
+          token: ${{ secrets.GITHUB_TOKEN }}

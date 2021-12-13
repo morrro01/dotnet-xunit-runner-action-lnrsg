@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Jest Tests" tests="15" failures="0" errors="0" time="13.791">
+  <testsuite name="getInputs" errors="0" failures="0" skipped="0" timestamp="2021-12-13T21:29:32" time="10.061" tests="13">
+    <testcase classname="getInputs &quot;with&quot; minimum valid action inputs" name="getInputs &quot;with&quot; minimum valid action inputs" time="0.004">
+    </testcase>
+    <testcase classname="getInputs &quot;with&quot; valid pr commenting action inputs" name="getInputs &quot;with&quot; valid pr commenting action inputs" time="0.002">
+    </testcase>
+    <testcase classname="getInputs &quot;with&quot; valid artifact upload action inputs" name="getInputs &quot;with&quot; valid artifact upload action inputs" time="0.002">
+    </testcase>
+    <testcase classname="getInputs &quot;with&quot; valid kitchen sink action inputs" name="getInputs &quot;with&quot; valid kitchen sink action inputs" time="0.003">
+    </testcase>
+    <testcase classname="getInputs &quot;with&quot; invalid &quot;path&quot; action input" name="getInputs &quot;with&quot; invalid &quot;path&quot; action input" time="0.035">
+    </testcase>
+    <testcase classname="getInputs &quot;with&quot; invalid &quot;github_token&quot; action input when &quot;comment_on_pr&quot; enabled" name="getInputs &quot;with&quot; invalid &quot;github_token&quot; action input when &quot;comment_on_pr&quot; enabled" time="0.001">
+    </testcase>
+    <testcase classname="getInputs &quot;with&quot; invalid &quot;artifact_name&quot; action input when &quot;upload_artifact&quot; enabled" name="getInputs &quot;with&quot; invalid &quot;artifact_name&quot; action input when &quot;upload_artifact&quot; enabled" time="0.001">
+    </testcase>
+    <testcase classname="getXUnitArgs generates with minimum valid input" name="getXUnitArgs generates with minimum valid input" time="0.001">
+    </testcase>
+    <testcase classname="getXUnitArgs generates with additional args" name="getXUnitArgs generates with additional args" time="0">
+    </testcase>
+    <testcase classname="getXUnitArgs generates kitchen sink" name="getXUnitArgs generates kitchen sink" time="0">
+    </testcase>
+    <testcase classname="getXUnitArgsString generates kitchen sink as string" name="getXUnitArgsString generates kitchen sink as string" time="0.001">
+    </testcase>
+    <testcase classname="getXUnitOutputDirPath generates xunit output directory with minimum valid input" name="getXUnitOutputDirPath generates xunit output directory with minimum valid input" time="0.001">
+    </testcase>
+    <testcase classname="getXUnitOutputDirPath generates xunit output directory with specific project path" name="getXUnitOutputDirPath generates xunit output directory with specific project path" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="getResults" errors="0" failures="0" skipped="0" timestamp="2021-12-13T21:29:32" time="11.476" tests="1">
+    <testcase classname="getResults parses trx file as xml into json" name="getResults parses trx file as xml into json" time="0.04">
+    </testcase>
+  </testsuite>
+  <testsuite name="test" errors="0" failures="0" skipped="0" timestamp="2021-12-13T21:29:32" time="11.553" tests="1">
+    <testcase classname="test calls exec" name="test calls exec" time="0.029">
+    </testcase>
+  </testsuite>
+</testsuites>
