@@ -1,0 +1,46 @@
+{
+    "name": "dotnet-xunit-runner-action-lnrsg",
+    "version": "1.0.0",
+    "description": "A GitHub action that runs XUnit against a .NET project, and reports the results.",
+    "main": "lib/index.js",
+    "repository": "https://github.com/morrro01/dotnet-xunit-runner-action-lnrsg.git",
+    "author": "morrro01 <robert.morrow@lexisnexisrisk.com>",
+    "license": "MIT",
+    "scripts": {
+        "build": "ncc build src/main.ts -o lib",
+        "dev": "node --loader ts-node/esm/transpile-only src/main.ts",
+        "format": "prettier --write **/*.ts",
+        "format-check": "prettier --check **/*.ts",
+        "test": "jest --coverage",
+        "test-ci": "jest --ci --reporters=default --reporters=jest-junit",
+        "pre-checkin": "yarn run format && yarn run build"
+    },
+    "jest-junit": {
+        "suiteName": "Jest Tests",
+        "outputDirectory": "./jest-junit",
+        "outputName": "junit.xml"
+    },
+    "dependencies": {
+        "@actions/artifact": "^0.6.0",
+        "@actions/core": "^1.6.0",
+        "@actions/exec": "^1.1.0",
+        "@actions/github": "^5.0.0",
+        "@actions/io": "^1.1.1",
+        "xml2js": "^0.4.23"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.3",
+        "@types/node": "^16.11.12",
+        "@types/xml2js": "^0.4.9",
+        "@vercel/ncc": "^0.33.0",
+        "jest": "^27.4.4",
+        "jest-circus": "^27.4.4",
+        "jest-junit": "^13.0.0",
+        "jest-runtime": "^27.4.4",
+        "prettier": "^2.5.1",
+        "ts-jest": "^27.1.1",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.3",
+        "typescript-formatter": "^7.2.2"
+    }
+}

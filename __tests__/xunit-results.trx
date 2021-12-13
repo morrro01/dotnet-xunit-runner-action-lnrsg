@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="5da4f69f-c5f8-47b2-bd49-a14cfeb859ac" name="MockTest 2021-12-13 13:03:07" runUser="Domain\MockUser" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2021-12-13T13:03:07.2012506-06:00" queuing="2021-12-13T13:03:07.2012510-06:00" start="2021-12-13T13:03:03.8020261-06:00" finish="2021-12-13T13:03:07.2103802-06:00" />
+  <TestSettings name="default" id="588dbee9-f740-43f6-97ee-07a82089a73c">
+    <Deployment runDeploymentRoot="MockTest_2021-12-13_13_03_07" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="2e9373b4-a9a8-451e-9fdc-222fb714c39f" testId="d4860159-e83e-39d5-095a-a83b88c54a24" testName="My.Mock.Namespace.Base58EncoderTests.DecodeTests" computerName="SOME-MACHINE" duration="00:00:00.0181569" startTime="2021-12-13T13:03:07.0487541-06:00" endTime="2021-12-13T13:03:07.0487543-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e9373b4-a9a8-451e-9fdc-222fb714c39f" />
+    <UnitTestResult executionId="e59117a2-744b-4e63-8fe2-4f63b73140be" testId="06445aaa-bb5b-9961-4dd3-4f4a80ebbabb" testName="My.Mock.Namespace.MockGeneratorTests.DecodeForDateTimeTests" computerName="SOME-MACHINE" duration="00:00:00.0086001" startTime="2021-12-13T13:03:07.0499373-06:00" endTime="2021-12-13T13:03:07.0499375-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e59117a2-744b-4e63-8fe2-4f63b73140be" />
+    <UnitTestResult executionId="9983d310-dc2b-46b6-a384-e0f300b1b3fb" testId="2fc7ce79-d07b-e5a8-968a-fda1a09d6fcb" testName="My.Mock.Namespace.MockGeneratorTests.DecodeForDateTimeStringTests" computerName="SOME-MACHINE" duration="00:00:00.0005634" startTime="2021-12-13T13:03:07.0542944-06:00" endTime="2021-12-13T13:03:07.0542945-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9983d310-dc2b-46b6-a384-e0f300b1b3fb" />
+    <UnitTestResult executionId="ec55032c-5ca1-45e8-b762-f461f9eb0bc1" testId="89d8dcae-c681-cc35-bd10-903d6cb11e53" testName="My.Mock.Namespace.MockGeneratorTests.GenerateRangeTests" computerName="SOME-MACHINE" duration="00:00:00.0030115" startTime="2021-12-13T13:03:07.0530919-06:00" endTime="2021-12-13T13:03:07.0530924-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec55032c-5ca1-45e8-b762-f461f9eb0bc1" />
+    <UnitTestResult executionId="c90acba4-412b-47f7-87c0-d617d645b30e" testId="c0d226e7-3dc7-73c1-021f-ab0e82853ee5" testName="My.Mock.Namespace.MockGeneratorTests.GenerateBinaryTests" computerName="SOME-MACHINE" duration="00:00:00.0102855" startTime="2021-12-13T13:03:07.0417288-06:00" endTime="2021-12-13T13:03:07.0417695-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c90acba4-412b-47f7-87c0-d617d645b30e" />
+    <UnitTestResult executionId="abc898c2-e711-4ca6-bc23-2802279fa6c9" testId="fd3f7549-8dbd-0453-554e-48229e90e2b7" testName="My.Mock.Namespace.Base58EncoderTests.DecodeTestInvalid" computerName="SOME-MACHINE" duration="00:00:00.0011842" startTime="2021-12-13T13:03:07.0489058-06:00" endTime="2021-12-13T13:03:07.0489059-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="abc898c2-e711-4ca6-bc23-2802279fa6c9" />
+    <UnitTestResult executionId="4975d713-0d4a-4190-b7c8-3d5f7ea3732a" testId="2042e662-60f0-e631-ff56-3327b503adf5" testName="My.Mock.Namespace.MockGeneratorTests.GenerateTests" computerName="SOME-MACHINE" duration="00:00:00.0004692" startTime="2021-12-13T13:03:07.0536522-06:00" endTime="2021-12-13T13:03:07.0536523-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4975d713-0d4a-4190-b7c8-3d5f7ea3732a" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="My.Mock.Namespace.MockGeneratorTests.GenerateTests" storage="c:\some\path\mockproject.tests\bin\debug\net6.0\mockproject.tests.dll" id="2042e662-60f0-e631-ff56-3327b503adf5">
+      <Execution id="4975d713-0d4a-4190-b7c8-3d5f7ea3732a" />
+      <TestMethod codeBase="c:\some\path\mockproject.tests\bin\Debug\net6.0\MockProject.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="My.Mock.Namespace.MockGeneratorTests" name="GenerateTests" />
+    </UnitTest>
+    <UnitTest name="My.Mock.Namespace.MockGeneratorTests.GenerateRangeTests" storage="c:\some\path\mockproject.tests\bin\debug\net6.0\mockproject.tests.dll" id="89d8dcae-c681-cc35-bd10-903d6cb11e53">
+      <Execution id="ec55032c-5ca1-45e8-b762-f461f9eb0bc1" />
+      <TestMethod codeBase="c:\some\path\mockproject.tests\bin\Debug\net6.0\MockProject.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="My.Mock.Namespace.MockGeneratorTests" name="GenerateRangeTests" />
+    </UnitTest>
+    <UnitTest name="My.Mock.Namespace.MockGeneratorTests.DecodeForDateTimeTests" storage="c:\some\path\mockproject.tests\bin\debug\net6.0\mockproject.tests.dll" id="06445aaa-bb5b-9961-4dd3-4f4a80ebbabb">
+      <Execution id="e59117a2-744b-4e63-8fe2-4f63b73140be" />
+      <TestMethod codeBase="c:\some\path\mockproject.tests\bin\Debug\net6.0\MockProject.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="My.Mock.Namespace.MockGeneratorTests" name="DecodeForDateTimeTests" />
+    </UnitTest>
+    <UnitTest name="My.Mock.Namespace.Base58EncoderTests.DecodeTests" storage="c:\some\path\mockproject.tests\bin\debug\net6.0\mockproject.tests.dll" id="d4860159-e83e-39d5-095a-a83b88c54a24">
+      <Execution id="2e9373b4-a9a8-451e-9fdc-222fb714c39f" />
+      <TestMethod codeBase="c:\some\path\mockproject.tests\bin\Debug\net6.0\MockProject.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="My.Mock.Namespace.Base58EncoderTests" name="DecodeTests" />
+    </UnitTest>
+    <UnitTest name="My.Mock.Namespace.Base58EncoderTests.DecodeTestInvalid" storage="c:\some\path\mockproject.tests\bin\debug\net6.0\mockproject.tests.dll" id="fd3f7549-8dbd-0453-554e-48229e90e2b7">
+      <Execution id="abc898c2-e711-4ca6-bc23-2802279fa6c9" />
+      <TestMethod codeBase="c:\some\path\mockproject.tests\bin\Debug\net6.0\MockProject.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="My.Mock.Namespace.Base58EncoderTests" name="DecodeTestInvalid" />
+    </UnitTest>
+    <UnitTest name="My.Mock.Namespace.MockGeneratorTests.GenerateBinaryTests" storage="c:\some\path\mockproject.tests\bin\debug\net6.0\mockproject.tests.dll" id="c0d226e7-3dc7-73c1-021f-ab0e82853ee5">
+      <Execution id="c90acba4-412b-47f7-87c0-d617d645b30e" />
+      <TestMethod codeBase="c:\some\path\mockproject.tests\bin\Debug\net6.0\MockProject.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="My.Mock.Namespace.MockGeneratorTests" name="GenerateBinaryTests" />
+    </UnitTest>
+    <UnitTest name="My.Mock.Namespace.MockGeneratorTests.DecodeForDateTimeStringTests" storage="c:\some\path\mockproject.tests\bin\debug\net6.0\mockproject.tests.dll" id="2fc7ce79-d07b-e5a8-968a-fda1a09d6fcb">
+      <Execution id="9983d310-dc2b-46b6-a384-e0f300b1b3fb" />
+      <TestMethod codeBase="c:\some\path\mockproject.tests\bin\Debug\net6.0\MockProject.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="My.Mock.Namespace.MockGeneratorTests" name="DecodeForDateTimeStringTests" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="d4860159-e83e-39d5-095a-a83b88c54a24" executionId="2e9373b4-a9a8-451e-9fdc-222fb714c39f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="06445aaa-bb5b-9961-4dd3-4f4a80ebbabb" executionId="e59117a2-744b-4e63-8fe2-4f63b73140be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2fc7ce79-d07b-e5a8-968a-fda1a09d6fcb" executionId="9983d310-dc2b-46b6-a384-e0f300b1b3fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89d8dcae-c681-cc35-bd10-903d6cb11e53" executionId="ec55032c-5ca1-45e8-b762-f461f9eb0bc1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0d226e7-3dc7-73c1-021f-ab0e82853ee5" executionId="c90acba4-412b-47f7-87c0-d617d645b30e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd3f7549-8dbd-0453-554e-48229e90e2b7" executionId="abc898c2-e711-4ca6-bc23-2802279fa6c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2042e662-60f0-e631-ff56-3327b503adf5" executionId="4975d713-0d4a-4190-b7c8-3d5f7ea3732a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.0-rtm.21522.10)&#xD;
+[xUnit.net 00:00:01.85]   Discovering: MockProject.Tests&#xD;
+[xUnit.net 00:00:01.93]   Discovered:  MockProject.Tests&#xD;
+[xUnit.net 00:00:01.93]   Starting:    MockProject.Tests&#xD;
+[xUnit.net 00:00:02.06]   Finished:    MockProject.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -1,0 +1,34 @@
+name: Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Jest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v2
+
+      - name: 🧱 Cache Dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles( 'package.json' )}}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: ⚙️ Install Dependencies
+        run: yarn
+
+      - name: 🔬 Test
+        run: yarn test-ci
+
+      - name: 🔬 Report
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        with:
+          files: jest-junit/**/*.xml
+          comment_title: "Jest Unit Test Results"
+          comment_mode: "update last"
