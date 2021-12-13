@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine
 LABEL repository="https://github.com/morrro01/dotnet-xunit-runner-action-lnrsg" \
     homepage="https://github.com/morrro01/dotnet-xunit-runner-action-lnrsg" \
     maintainer="morrro01" \
